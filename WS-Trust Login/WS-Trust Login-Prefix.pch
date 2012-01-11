@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'WS-Trust Login' target in the 'WS-Trust Login' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
