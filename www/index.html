@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="utils.js"></script>
+    <script type="text/javascript" charset="utf-8" src="wstrust.js"></script>
+    <script type="text/javascript" charset="utf-8" src="saml11.js"></script>
+
+    <script type="text/javascript">
+	
+
+	function login(username, pass, stsUrl, appliesTo, encrypted) {
+		var wstrust = new WsTrust(stsUrl);
+		wstrust.requestSecurityToken(username, pass, appliesTo, encrypted, {
+			success: function(token) {
+				var claims = new Saml11(token).getClaims();
+				$.each(claims, function(index, claim) {
+					$("#claims").append('<li>'+  claim.type + ' : ' + claim.value + '</li>')
+				});
+			},
+			error: function(xhr) {
+				$("#error").text('There was an error loading the data. (' + xhr.statusText + ')');
+			}
+		});
+	}
+
+    $(document).ready(function(){
+    	$("#login").click(function() {
+
+    		login($("#username").val(), 
+    			  $("#password").val(), 
+    			  'https://login.southworks.net/adfs/services/trust/13/usernamebasictransport', 
+    			  'urn:anotherservicex', 
+    			  false);
+    	})
+
+		if (PhoneGap.available) {
+	        $(document).bind('deviceready', function(){
+				
+	        });
+    	} 
+    });
+    
+    </script>
+  </head>
+  <body>
+  	<input type="text" id="username" value="" />
+  	<input type="password" id="password" value="" />
+  	<input type="submit" value="Login" id="login" />
+    <h2>claims</h2>
+  	<ul id="claims" />
+  	<div id="error" style="color: red"/>
+	
+  </body>
+</html>

@@ -33,6 +33,7 @@
 		605D522A14BDF5540090AA99 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 605D522914BDF5540090AA99 /* Capture.bundle */; };
 		605D522C14BDF5540090AA99 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 605D522B14BDF5540090AA99 /* PhoneGap.plist */; };
 		605D523014BDF5540090AA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605D522F14BDF5540090AA99 /* AppDelegate.m */; };
+		605D523914BDF5F60090AA99 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 605D523814BDF5F50090AA99 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +51,10 @@
 		605D520314BDF5530090AA99 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		605D520514BDF5530090AA99 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		605D520714BDF5530090AA99 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		605D520B14BDF5540090AA99 /* WS-Trust Login-Info.plist */ = {isa = PBXFileReference; path = "WS-Trust Login-Info.plist"; sourceTree = "<group>"; };
+		605D520B14BDF5540090AA99 /* WS-Trust Login-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WS-Trust Login-Info.plist"; sourceTree = "<group>"; };
 		605D520D14BDF5540090AA99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		605D520F14BDF5540090AA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		605D521114BDF5540090AA99 /* WS-Trust Login-Prefix.pch */ = {isa = PBXFileReference; path = "WS-Trust Login-Prefix.pch"; sourceTree = "<group>"; };
+		605D521114BDF5540090AA99 /* WS-Trust Login-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WS-Trust Login-Prefix.pch"; sourceTree = "<group>"; };
 		605D521214BDF5540090AA99 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		605D521714BDF5540090AA99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		605D521B14BDF5540090AA99 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,9 +65,10 @@
 		605D522714BDF5540090AA99 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		605D522914BDF5540090AA99 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		605D522B14BDF5540090AA99 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		605D522E14BDF5540090AA99 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		605D522E14BDF5540090AA99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		605D522F14BDF5540090AA99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		605D523214BDF5540090AA99 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		605D523214BDF5540090AA99 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		605D523814BDF5F50090AA99 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		605D51DD14BDF5530090AA99 = {
 			isa = PBXGroup;
 			children = (
+				605D523814BDF5F50090AA99 /* www */,
 				605D520914BDF5530090AA99 /* WS-Trust Login */,
 				605D51EE14BDF5530090AA99 /* Frameworks */,
 				605D51EC14BDF5530090AA99 /* Products */,
@@ -291,6 +294,7 @@
 				605D522814BDF5540090AA99 /* Default@2x.png in Resources */,
 				605D522A14BDF5540090AA99 /* Capture.bundle in Resources */,
 				605D522C14BDF5540090AA99 /* PhoneGap.plist in Resources */,
+				605D523914BDF5F60090AA99 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
