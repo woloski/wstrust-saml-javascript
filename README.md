@@ -41,4 +41,4 @@ It is basically a carefully crafted SOAP envelope with the RequestSecurityToken 
 
 This was tested from PhoneGap / XCode against ADFS with the `usernamebasictransport` endpoint turned on. 
 
-![screenshot](screenshot.png "login success")
+![screenshot](/wstrust-saml-javascript/screenshot.png "login success")
