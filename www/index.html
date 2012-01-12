@@ -19,6 +19,7 @@
 	
 
 	function login(username, pass, stsUrl, appliesTo, encrypted) {
+        $("#error").text('');
 		var wstrust = new WsTrust(stsUrl);
 		wstrust.requestSecurityToken(username, pass, appliesTo, encrypted, {
 			success: function(token) {
@@ -28,7 +29,11 @@
 				});
 			},
 			error: function(xhr) {
-				$("#error").text('There was an error loading the data. (' + xhr.statusText + ')');
+				if (xhr.status == 403) {
+					$("#error").text('Incorret username or password');				
+				} else {
+					$("#error").text('Login failed (' + xhr.status + ' - ' + xhr.statusText + ')');				
+				}
 			}
 		});
 	}
@@ -38,8 +43,8 @@
 
     		login($("#username").val(), 
     			  $("#password").val(), 
-    			  'https://REPLACE_WITH_YOUR_ADFS/adfs/services/trust/13/usernamebasictransport', 
-    			  'REPLACE_WITH_REALM_IDENTIFIER', 
+    			  'https://login.southworks.net/adfs/services/trust/13/usernamebasictransport', 
+    			  'urn:anotherservicex', 
     			  false);
     	})
 
